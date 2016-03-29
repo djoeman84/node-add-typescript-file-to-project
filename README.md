@@ -18,11 +18,9 @@ The script requires one parameter, the virtual path to the TypeScript file you w
 
 So, to use the module in for instance a gulp task:
 
-gulp.task('default', function (cb) {
-    var addTypeScript = require('add-typescript-file-to-project');
+var addTypeScript = require('add-typescript-file-to-project');
     
-    addTypeScript.execute('/app/resources/some-file.ts');
-});
+addTypeScript.execute('/app/resources/some-file.ts');
 
 Voilá, a reference to '/app/resources/some-file.ts' is added to your Visual Studio project.
 
