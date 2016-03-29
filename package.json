@@ -1,0 +1,32 @@
+{
+  "name": "add-typescript-file-to-project",
+  "version": "1.0.0",
+  "description": "Adds a TypeScript file reference to the Visual Studio project file.",
+  "main": "index.js",
+  "dependencies": {
+    "elementtree": "*",
+    "formattor": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvdcorput/node-add-typescript-file-to-project.git"
+  },
+  "keywords": [
+    "typescript",
+    "csproj",
+    "vbproj",
+    "project",
+    "vs2015",
+	"add"
+  ],
+  "author": "Martijn van der Corput",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvdcorput/node-add-typescript-file-to-project/issues"
+  },
+  "homepage": "https://github.com/mvdcorput/node-add-typescript-file-to-project#readme"
+}
