@@ -1,8 +1,11 @@
-var fs = require('fs');
-var path = require('path');
-var etree = require("elementtree");
+declare const __dirname: string;
+declare const require: any;
 
-exports.execute = function(relativeTypeScriptFilename) {
+const fs = require('fs');
+const path = require('path');
+const etree = require("elementtree");
+
+export function execute(relativeTypeScriptFilename: string): void {
     var content = '';
     
     // Setup relativeTypeScriptFilename      
@@ -13,22 +16,22 @@ exports.execute = function(relativeTypeScriptFilename) {
     }
     
     addToProjectFile(relativeTypeScriptFilename);
-    
-    function addToProjectFile(relativeTypeScriptFilename) {
+     
+    function addToProjectFile(relativeTypeScriptFilename: string) {
         var relativeRootFolder = path.resolve(__dirname).split('\\node_modules')[0];
         
-        fs.readdir(relativeRootFolder, function (err, files) {
+        fs.readdir(relativeRootFolder, function (err: any, files: any) {
             if (err) {
                 throw err;
             }
             
             var projectFile = '';
             
-            files.map(function (file) {
+            files.map(function (file: any) {
                 return path.join(relativeRootFolder, file);
-            }).filter(function (file) {
+            }).filter(function (file: any) {
                 return fs.statSync(file).isFile();
-            }).forEach(function (file) {
+            }).forEach(function (file: any) {
                 var fileExtension = path.extname(file);
                 
                 if (projectFile === '' && (fileExtension === '.csproj' || fileExtension === '.vbproj'))
@@ -43,8 +46,7 @@ exports.execute = function(relativeTypeScriptFilename) {
         });    
     }   
     
-    function addToProjectFileUpsertTypeScriptFile(projectFile, relativeTypeScriptFilename)
-    {
+    function addToProjectFileUpsertTypeScriptFile(projectFile: string, relativeTypeScriptFilename: string): void {
         var data = fs.readFileSync(projectFile).toString();
         var xml = etree.parse(data.toString().replace(/\ufeff/g, ""));
         var projectElement = xml.findall('./Project')[0];
@@ -63,7 +65,7 @@ exports.execute = function(relativeTypeScriptFilename) {
         }
     }
      
-    function getRelativeRootFolder() {
+    function getRelativeRootFolder(): string {
         var rootFolder = path.resolve(__dirname).split('\\node_modules')[0];
         var relativeNpmFolder = __dirname.replace(rootFolder, "");
         var relativeRootFolder = '/';

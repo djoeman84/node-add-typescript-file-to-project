@@ -1,32 +1,45 @@
 {
-  "name": "add-typescript-file-to-project",
-  "version": "1.0.0",
-  "description": "Adds a TypeScript file reference to the Visual Studio project file.",
-  "main": "index.js",
+
+ "author": {
+    "name": "Martijn van der Corput"
+  },
+  "bugs": {
+    "url": "https://github.com/mvdcorput/node-add-typescript-file-to-project/issues"
+  },
   "dependencies": {
     "elementtree": "*",
     "formattor": "*"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Adds a TypeScript file reference to the Visual Studio project file.",
+  "devDependencies": {
+    "typescript": "^1.8.10"    
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mvdcorput/node-add-typescript-file-to-project.git"
-  },
+  "homepage": "https://github.com/mvdcorput/node-add-typescript-file-to-project#readme",
   "keywords": [
     "typescript",
     "csproj",
     "vbproj",
     "project",
     "vs2015",
-	"add"
+    "add"
   ],
-  "author": "Martijn van der Corput",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mvdcorput/node-add-typescript-file-to-project/issues"
+  "main": "dist/index.js",
+  "maintainers": [
+    {
+      "email": "mvdcorput@live.nl",
+      "name": "mvdcorput"
+    }
+  ],
+  "name": "add-typescript-file-to-project",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvdcorput/node-add-typescript-file-to-project.git"
   },
-  "homepage": "https://github.com/mvdcorput/node-add-typescript-file-to-project#readme"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
 }
